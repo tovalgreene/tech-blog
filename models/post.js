@@ -5,6 +5,11 @@ class post extends Model { }
 
 post.init(
     {
+        id: {
+            type: DataTypes.INTEGER,
+            primaryKey: true,
+            autoIncrement: true,
+        },
         title: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -27,5 +32,13 @@ post.init(
         modelName: 'post',
     }
 );
+
+post.belongsTo(user, {
+    foreignKey: 'user_id'
+});
+
+post.hasMany(comment, {
+    foreignKey: 'post_id',
+});
 
 module.exports = post;
