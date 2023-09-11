@@ -1,8 +1,8 @@
 const router = require('express').Router();
 const { post, comment } = require('../models');
+const isAuthenticated = require('../utils/auth');
 
-
-router.get('/:id', async (req, res) => {
+router.get('/:id', isAuthenticated, async (req, res) => {
     try {
         const postID = req.params.id;
         const post = await this.post.findByPk(postID, {

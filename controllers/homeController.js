@@ -1,8 +1,8 @@
 const router = require('express').Router();
 const { getAllPosts } = require('../models/post');
+const isAuthenticated = require('../utils/auth');
 
-
-router.get('/', async (req, res) => {
+router.get('/', isAuthenticated, async (req, res) => {
     try {
         const posts = await getAllPosts();
         res.render('home', { posts });
