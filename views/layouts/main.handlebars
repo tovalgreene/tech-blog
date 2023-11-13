@@ -1,13 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Blog</title>
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #f8f9fa;
+            padding: 10px 0;
+            text-align: center;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        li {
+            display: inline;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+            padding: 5px 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        a:hover {
+            background-color: #ddd;
+        }
+        .container-lg {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    </style>
 </head>
+
 <body>
-    {{{ body }}}
-    {{> footer}}
+    <header>
+        <ul id="pillNav2">
+            <li role="presentation">
+                <a id="home-tab2" href="/" role="tab" aria-selected="true">Home</a>
+            </li>
+            <li role="presentation">
+                <a id="dashboard-tab2" href="/dashboard" role="tab" aria-selected="false">Dashboard</a>
+            </li>
+            <li role="presentation">
+                <a id="login-tab2" href="/login" role="tab" aria-selected="false">Login</a>
+            </li>
+            <li role="presentation">
+                <a id="signup-tab2" href="/signup" role="tab" aria-selected="false">Sign Up</a>
+            </li>
+            <li role="presentation">
+                <a id="logout-tab2" href="/logout" role="tab" aria-selected="false">Logout</a>
+            </li>
+        </ul>
+        <h1>Tech Blog</h1>
+    </header>
+
+    <div class="bg">
+        <div class="container-lg text-center">
+            {{{body}}}
+        </div>
+    </div>
+
 </body>
 </html>
