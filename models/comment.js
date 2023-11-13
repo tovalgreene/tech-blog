@@ -1,42 +1,43 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-const user = require('./user');
-const post = require('./post');
 
-class comment extends Model { }
+// Define the Comment model
+class Comment extends Model {}
 
-comment.init(
-    {
-        id: {
-            type: DataTypes.INTEGER,
-            primaryKey: true,
-            autoIncrement: true,
-        },
-        content: {
-            type: DataTypes.TEXT,
-            allowNull: false,
-        },
-        createdAt: {
-            type: DataTypes.DATE,
-            allowNull: false,
-            defaultValue: DataTypes.NOW,
-        },
-
+Comment.init({
+    // Define fields and their data types
+    id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        primaryKey: true,
+        autoIncrement: true
     },
-    {
-        sequelize,
-        freezeTableName: true,
-        underscored: true,
-        modelName: 'comment',
+    comment_text: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            len: [1] // Ensure the comment is at least 1 character long
+        }
+    },
+    user_id: {
+        type: DataTypes.INTEGER,
+        references: {
+            model: 'user', // Reference to the 'user' model
+            key: 'id'
+        }
+    },
+    post_id: {
+        type: DataTypes.INTEGER,
+        references: {
+            model: 'post', // Reference to the 'post' model
+            key: 'id'
+        }
     }
-);
-
-comment.belongsTo(user, {
-    foreignKey: 'user_id',
+}, {
+    sequelize, // Pass the connection instance
+    freezeTableName: true, // Prevent Sequelize from renaming the table
+    underscored: true, // Use underscored instead of camelCasing
+    modelName: 'comment' // Define the model name
 });
 
-comment.belongsTo(post, {
-    foreignKey: 'post_id',
-});
-
-module.exports = comment;
+module.exports = Comment; // Export the model
