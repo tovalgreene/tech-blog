@@ -1,14 +1,14 @@
 INSERT INTO users (username, email, password) VALUES
-('JaneDoe', 'jane.doe@example.com', 'hashed_password1'),
-('JohnSmith', 'john.smith@example.com', 'hashed_password2'),
-('AliceJohnson', 'alice.johnson@example.com', 'hashed_password3');
+('User 1', 'user1@example.com', 'hashed_password1'),
+('User 2', 'user2@example.com', 'hashed_password2'),
+('User 3', 'user3@example.com', 'hashed_password3');
 
 INSERT INTO posts (title, content, user_id) VALUES
-('First Post', 'This is the content of the first post', 1),
-('Second Post', 'This is the content of the second post', 2),
-('Third Post', 'This is the content of the third post', 3);
+('First Post', 'First post comment', 1),
+('Second Post', 'Second post comment', 2),
+('Third Post', 'Third post comment', 3);
 
 INSERT INTO comments (content, user_id, post_id) VALUES
-('This is a comment on the first post', 2, 1),
-('This is a comment on the second post', 1, 2),
-('This is another comment on the first post', 3, 1);
+('First post comment', 2, 1),
+('Second post comment', 1, 2),
+('Third post comment', 3, 1);
