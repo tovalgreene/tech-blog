@@ -1,30 +1,22 @@
 ## CMS-Style Blog Site
 # Description
-This tech CMS-style blog is a platform that allows users to view, create, update, and interact with blog posts.
+This tech CMS-style blog is a platform that allows users to view, create, update, and interact with blog posts. Its purpose is for techies to publish articles, blog posts, and their thoughts and opinions!
 
 # Features
-Homepage Accessibility: When visiting the site for the first time, users are presented with the homepage displaying existing blog posts, navigation links to the homepage and dashboard, and an option to log in.
+- When visiting the site users are presented with the homepage displaying existing posts, links to the homepage and dashboard, and an option to log in/log out.
+- New users can log in and out using user authentication.
+- Users can make new posts! 
+- Users can click on any blog post and read it, and they can leave comments on it! 
+- Users can manage their own blog posts! P
 
-User Authentication: New users can sign up by creating a username and password. Existing users can log in using their credentials. On returning to the site, users will be prompted to sign in again.
-
-User Dashboard: Signed-in users have access to a dashboard where they can view their blog posts and have the option to add new posts.
-
-Post Interaction: Users can click on any blog post to view detailed content, including the post title, contents, creator’s username, date of creation, and comments. Users have the option to leave comments on posts.
-
-Post Management: On the dashboard, users can manage their blog posts. They have the option to add a new post or update/delete existing posts.
-
-Auto Logout: After a period of inactivity, users will be logged out for security purposes and will need to log in again to add, update, or delete posts.
 
 # Usage
-Viewing Posts: Visit the homepage to view all available blog posts.
-
-Signing Up/In: Click on the sign-up/sign-in link to access user-specific features.
-
-Creating Posts: Access the dashboard to create new blog posts.
-
-Editing Posts: Existing posts can be edited or deleted from the dashboard.
-
-Commenting: Add comments to blog posts by visiting individual post pages.
+- Viewing Posts
+- Signing Up
+- Logging In/Out
+- Creating Posts
+- Editing Posts:
+- Commenting
 
 # Logout
-Users can log out via the navigation link, ensuring their session is securely closed.
+Users can log out via the navigation link.
