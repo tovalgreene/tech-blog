@@ -1,12 +1,10 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-// Define the Post model
 class Post extends Model {}
 
 Post.init(
     {
-        // Define fields and their data types
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
@@ -24,17 +22,17 @@ Post.init(
         user_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'user', // Reference to the 'user' model
+                model: 'user', 
                 key: 'id'
             }
         }
     },
     {
-        sequelize, // Pass the connection instance
-        freezeTableName: true, // Prevent Sequelize from renaming the table
-        underscored: true, // Use underscored instead of camelCasing
-        modelName: 'post' // Define the model name
+        sequelize, 
+        freezeTableName: true, 
+        underscored: true, 
+        modelName: 'post' 
     }
 );
 
-module.exports = Post; // Export the model
+module.exports = Post;
