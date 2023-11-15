@@ -1,6 +1,6 @@
 ## CMS-Style Blog Site
 # Description
-This CMS-style blog site is designed to provide a seamless and interactive blogging experience. It offers a platform for users to view, create, update, and interact with blog posts.
+This tech CMS-style blog is a platform that allows users to view, create, update, and interact with blog posts.
 
 # Features
 Homepage Accessibility: When visiting the site for the first time, users are presented with the homepage displaying existing blog posts, navigation links to the homepage and dashboard, and an option to log in.
@@ -17,12 +17,14 @@ Auto Logout: After a period of inactivity, users will be logged out for security
 
 # Usage
 Viewing Posts: Visit the homepage to view all available blog posts.
+
 Signing Up/In: Click on the sign-up/sign-in link to access user-specific features.
+
 Creating Posts: Access the dashboard to create new blog posts.
+
 Editing Posts: Existing posts can be edited or deleted from the dashboard.
+
 Commenting: Add comments to blog posts by visiting individual post pages.
 
 # Logout
 Users can log out via the navigation link, ensuring their session is securely closed.
-
-Note: This CMS-style blog site is designed for ease of use, with a focus on user interaction and content management. Enjoy sharing and discussing ideas on this dynamic platform!
